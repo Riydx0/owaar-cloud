@@ -1,7 +1,7 @@
 # ─────────────────────────────────────────────
 # Stage 1: Build React/Vite App
 # ─────────────────────────────────────────────
-FROM node:20-alpine AS builder
+FROM node:20-slim AS builder
 
 RUN npm install -g pnpm@10
 
@@ -18,7 +18,7 @@ COPY lib/api-client-react/package.json ./lib/api-client-react/
 COPY artifacts/owaar-cloud/package.json ./artifacts/owaar-cloud/
 
 # Install all dependencies
-RUN rm pnpm-lock.yaml && pnpm install
+RUN pnpm install --frozen-lockfile
 
 # Copy all source files
 COPY lib/ ./lib/
