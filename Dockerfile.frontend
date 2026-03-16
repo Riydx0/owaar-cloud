@@ -18,7 +18,7 @@ COPY lib/api-client-react/package.json ./lib/api-client-react/
 COPY artifacts/owaar-cloud/package.json ./artifacts/owaar-cloud/
 
 # Install all dependencies
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --no-frozen-lockfile
 
 # Copy all source files
 COPY lib/ ./lib/
