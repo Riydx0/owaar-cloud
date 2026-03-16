@@ -1,0 +1,20 @@
+packages:
+  "framer-motion": "For fluid page transitions and stunning micro-interactions"
+  "zustand": "For lightweight global state management (auth, language)"
+  "date-fns": "For formatting deployment dates cleanly"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility to safely merge Tailwind classes"
+  "lucide-react": "Beautiful consistent icons"
+
+images:
+  - path: "artifacts/owaar-cloud/public/images/hero-bg.png"
+    description: "Abstract premium dark mode gradient background with deep navy and sapphire blue glowing wisps, modern enterprise SaaS feel, ultra high resolution"
+    aspect_ratio: "16:9"
+  - path: "artifacts/owaar-cloud/public/images/logo-icon.png"
+    description: "Minimalist glowing sapphire blue cloud icon on a transparent background, professional tech startup logo mark"
+    aspect_ratio: "1:1"
+
+notes:
+  - Global fetch interceptor added in main/App to inject Authorization: Bearer token for all generated @workspace/api-client-react hooks
+  - Relies on generated React Query hooks and schemas from lib/api-client-react
+  - Force dark mode theme via CSS variables, RTL support managed by html dir attribute
